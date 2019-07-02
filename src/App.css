@@ -1,0 +1,19 @@
+* {
+  outline: none !important;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background: #282c34;
+}
+
+#root {
+  height: 100%;
+}
+
+.full-h {
+  height: 100%;
+}
