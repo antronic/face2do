@@ -25,6 +25,7 @@ const identifyEndpoint = 'https://southeastasia.api.cognitive.microsoft.com/face
 const findSimilarEndpoint = 'https://southeastasia.api.cognitive.microsoft.com/face/v1.0/findsimilars'
 
 function App() {
+  const [ id, setId ] = useState(null)
   const [ file, setFile ] = useState(null)
   const [ img, setImg ] = useState(null)
   const [ name, setName ] = useState('')
@@ -123,6 +124,7 @@ function App() {
     .then((result) => {
       const { persistedFaceId } = result
 
+      setId(persistedFaceId)
       addFindToDb(persistedFaceId)
     })
   }
@@ -211,6 +213,7 @@ function App() {
                           height: '100%',
                         }}
                       />
+                      <p>{id}</p>
                     </div>
                   </div>
 
